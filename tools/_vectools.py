@@ -4,6 +4,11 @@ from scipy.linalg import expm
 
 H_gate = 1/np.sqrt(2) * np.array([[ 1, 1],
                                   [ 1,-1]])
+
+
+def commutator(A,B):
+    return A@B - B@A
+
 def pad(mat: np.ndarray, pad: int) -> np.ndarray:
     """
     Return a new array consisting of `mat` with a border of zeros of width `pad`.
